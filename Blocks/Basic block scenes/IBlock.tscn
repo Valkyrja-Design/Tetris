@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Blocks/Basic blocks/I_Tetromino-0.png" type="Texture" id=1]
+
+[node name="IBlock" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.19209e-06, 7.15256e-07 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Blocks/Basic block scenes/OBlock.tscn" type="PackedScene" id=1]
+
+[node name="O block" type="Node2D"]
+position = Vector2( 180, 30 )
+
+[node name="OBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( 15, -15 )
+
+[node name="OBlock2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -15, -15 )
+
+[node name="OBlock3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -15, 15 )
+
+[node name="OBlock4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 15, 15 )
