@@ -30,15 +30,16 @@ func _ready():
 	clears_label = get_node("ClearsLabel")
 	score_label.set_text("0")
 	level_label.set_text(String(level))
-	clears_label = get_node(String(total_line_clears))
 	curr_index = rng.randi_range(0,6)
 	curr_block = blocks[curr_index].instance()
 	next_index = rng.randi_range(0,6)
 	next_block = blocks[next_index].instance()
+	next_block.hide()
+	add_child(next_block)
 	next_block.global_position.x += 300
 	next_block.global_position.y += 60
 	add_child(curr_block)
-	add_child(next_block)
+	next_block.show()
 	for _i in range(200):
 		occu.append([0,null])
 	for i in curr_block.get_children():
@@ -169,12 +170,14 @@ func new_block():
 	next_index = rng.randi_range(0,6)
 	next_block.queue_free()
 	next_block = blocks[next_index].instance()
+	next_block.hide()
+	add_child(next_block)
 	next_block.global_position.x += 300
 	next_block.global_position.y += 60
 	var gameover = false
 	curr_block.hide()
 	add_child(curr_block)
-	add_child(next_block)
+	next_block.show()
 	for newchild in curr_block.get_children():
 		var xnew = int((newchild.global_position.x-30)/30)
 		var ynew = int(newchild.global_position.y/30)
