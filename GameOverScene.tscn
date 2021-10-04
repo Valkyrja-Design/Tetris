@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://GemunuLibre-Light.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://RobotoMono-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GameOverScreen.gd" type="Script" id=3]
+[ext_resource path="res://GemunuLibre-ExtraLight.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 4 )
+
+[node name="Gameover" type="CanvasLayer"]
+
+[node name="GameOverScreen" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GameOverScreen"]
+margin_left = 150.0
+margin_top = 90.0
+margin_right = 450.0
+margin_bottom = 210.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Game Over"
+align = 1
+valign = 1
+
+[node name="Retry" type="Button" parent="GameOverScreen"]
+modulate = Color( 0.0235294, 0, 1, 1 )
+margin_left = 210.0
+margin_top = 330.0
+margin_right = 385.0
+margin_bottom = 390.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.709804, 0, 1, 1 )
+text = "Retry"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="Button" parent="GameOverScreen"]
+modulate = Color( 0.0235294, 0, 1, 1 )
+margin_left = 180.0
+margin_top = 420.0
+margin_right = 410.0
+margin_bottom = 480.0
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0235294, 0, 1, 1 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="GameOverScreen"]
+margin_left = 150.0
+margin_top = 240.0
+margin_right = 465.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.114441, 0.976563, 0.208735, 1 )
+align = 1
+valign = 1
+
+[connection signal="pressed" from="GameOverScreen/Retry" to="GameOverScreen" method="_on_Retry_pressed"]
+[connection signal="pressed" from="GameOverScreen/Return" to="GameOverScreen" method="_on_Return_pressed"]
