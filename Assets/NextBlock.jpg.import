@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NextBlock.jpg-9761613f5dfe1577c078e609794720b9.stex"
+path="res://.import/NextBlock.jpg-b61e466bce97dd6e443209b967dea701.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NextBlock.jpg"
-dest_files=[ "res://.import/NextBlock.jpg-9761613f5dfe1577c078e609794720b9.stex" ]
+source_file="res://Assets/NextBlock.jpg"
+dest_files=[ "res://.import/NextBlock.jpg-b61e466bce97dd6e443209b967dea701.stex" ]
 
 [params]
 

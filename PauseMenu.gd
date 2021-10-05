@@ -25,4 +25,5 @@ func _on_Resume_pressed():
 
 func _on_Menu_pressed():
 	get_tree().paused = false
+	Global.score = 0
 	get_tree().change_scene("res://Main_Menu.tscn")

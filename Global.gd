@@ -6,6 +6,7 @@ var save_path = "user://savegame.save" #place of the file
 var save_data = {"highscore": 0} #variable to store data
 
 func _ready():
+	score = 0
 	if not savegame.file_exists(save_path):
 		create_save()
 
