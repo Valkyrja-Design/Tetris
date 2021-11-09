@@ -6,5 +6,3 @@ If you simply want to try out the game, go to Tetris/ and download the two files
 Or if you want to improve/see the code, you can clone/download all the files and open the project in Godot engine.
 
 The main code files are the files with .gd extension.
-
-I'll try to improve the game as I learn new stuff about the engine.
